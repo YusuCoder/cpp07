@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 18:19:23 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/11/13 18:25:18 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:59:13 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 
 	std::cout << "The memory adress of th str variable is: " << &str << std::endl;
 	std::cout << "The memeory adress held by ptr: " << ptr << std::endl;
-	std::cout << "The memory adress reference held by ref: " << ref << std::endl;
+	std::cout << "The memory adress reference held by ref: " << &ref << std::endl;
 
 	std::cout << std::endl;
 

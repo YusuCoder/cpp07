@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 17:34:37 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/11/13 17:57:59 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:52:34 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Zombie{
 		std::string	name;
 	public:
 		Zombie();
-		Zombie(std::string name);
 		~Zombie();
 		void announce();
 		void SetName(std::string name);

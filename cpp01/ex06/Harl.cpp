@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 22:59:14 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/11/19 13:33:46 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/11/19 13:42:19 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,30 @@ void Harl::error(void) {
 
 void	Harl::complain(std::string level) {
 	static const std::string lvls[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void (Harl::*complains[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	int	found = -1;
 
 	for (int i = 0; i < 4; i++) {
 		if (lvls[i] == level) {
-			(this->*complains[i])();
-			return ;
+			found = i;
+			break ;
 		}
 	}
-	std::cout << "There is no such level \"" << level << "\"." << std::endl;
+	switch (found)
+	{
+	case 0:
+		this->debug();
+		found++;
+	case 1:
+		this->info();
+		found++;
+	case 2:
+		this->warning();
+		found++;
+	case 3:
+		this->error();
+		break ;
+	default:
+		std::cout << "There is no such level \"" << level << "\"." << std::endl;
+	}
+	return ;
 }

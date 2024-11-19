@@ -6,7 +6,8 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:27:30 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/11/12 17:30:16 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:38:02 by ryusupov         ###   ########.fr       */
+
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +17,7 @@ int	main(void)
 {
 	Zombie	*z;
 
-	randomChump("Chumpie");
+	randomChump("Chump");
 	z = newZombie("New Zombie");
 	z->announce();
 	delete z;
