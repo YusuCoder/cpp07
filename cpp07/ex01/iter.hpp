@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 17:46:24 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/11/19 14:23:18 by ryusupov         ###   ########.fr       */
+/*   Created: 2025/02/25 13:35:55 by ryusupov          #+#    #+#             */
+/*   Updated: 2025/02/25 14:08:04 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#ifndef ITER_HPP
+#define ITER_HPP
+#include <iostream>
 
-int main()
-{
-{
-	Weapon club = Weapon("ak47");
-	HumanA bob("Bob", club);
-	bob.attack();
-	club.set_type("some other type of weapon");
-	bob.attack();
-}
-{
-	Weapon club = Weapon("desert");
-	HumanB jim("Jim");
-	jim.setWeapon(club);
-	jim.attack();
-	club.set_type("some other type of gun");
-	jim.attack();
-}
-return 0;
-}
+template <typename T>
+void	_print (T &src) {
+	std::cout << src << " ";
+};
+
+template <typename T>
+void	_add(T &src) {
+	src++;
+};
+
+template <typename T>
+void	iter(T *a, size_t len, void (*fn)(T&)) {
+	if (a == NULL || fn == NULL)
+		return ;
+	for (size_t i = 0; i < len; i++)
+		fn(a[i]);
+};
+
+#endif

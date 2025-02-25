@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 17:46:24 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/11/19 14:23:18 by ryusupov         ###   ########.fr       */
+/*   Created: 2025/02/25 12:24:30 by ryusupov          #+#    #+#             */
+/*   Updated: 2025/02/25 13:31:13 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
 
-int main()
-{
-{
-	Weapon club = Weapon("ak47");
-	HumanA bob("Bob", club);
-	bob.attack();
-	club.set_type("some other type of weapon");
-	bob.attack();
+#include <iostream>
+
+template <typename T>
+void	swap(T &a, T &b) {
+	T tmp;
+
+	tmp = a;
+	a = b;
+	b = tmp;
 }
-{
-	Weapon club = Weapon("desert");
-	HumanB jim("Jim");
-	jim.setWeapon(club);
-	jim.attack();
-	club.set_type("some other type of gun");
-	jim.attack();
+
+template <typename T>
+T min (const T &a, const T &b) {
+	if (a < b)
+		return (a);
+	else
+		return (b);
 }
-return 0;
+
+template <typename T>
+T max (const T &a, const T &b) {
+	if (a > b)
+		return (a);
+	else
+		return (b);
 }
+#endif
