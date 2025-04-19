@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 14:38:00 by ryusupov          #+#    #+#             */
-/*   Updated: 2025/02/25 14:45:45 by ryusupov         ###   ########.fr       */
+/*   Updated: 2025/04/19 14:10:23 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ class Array {
 			};
 };
 
+#include "Array.tpp"
 #endif
