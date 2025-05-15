@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:44:00 by ryusupov          #+#    #+#             */
-/*   Updated: 2025/02/25 14:05:39 by ryusupov         ###   ########.fr       */
+/*   Updated: 2025/05/15 13:32:23 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ int main(void)
 	iter(nums, 20, &_add<int>);
 	iter(nums, 20, &_print<int>);
 
+	delete [] nums;
+	delete [] str;
 }
 
